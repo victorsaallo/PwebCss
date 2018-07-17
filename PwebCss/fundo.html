@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>CSS Fundo</title>
+    </head>
+    <body>
+        <h1>CSS Fundo</h1>
+        <h2>Cor de fundo</h2>
+        <p>A background-colorpropriedade especifica a cor de fundo de um elemento.<br>
+            A cor de uma página de fundo é definida assim:</p>
+        <div id="2" style="background-color: aquamarine">
+        Exemplo
+        <pre xmt>
+            body {
+            background-color: lightblue;
+            } 
+        </pre>
+        </div>
+        <p>Com CSS, uma cor é mais frequentemente especificado por:</p>
+            <ul>
+                <li>um nome de cor válido - como "vermelho"</li>
+                <li>um valor HEX - como "# FF0000"</li>
+                <li>um valor RGB - como "rgb (255,0,0)"</li>
+            </ul>
+            <p>Olhe para valores de cor CSS para uma completa lista de possíveis valores de cor.<br>
+                No exemplo abaixo, o <span><</span>h1<span>></span>, <span><</span>p<span>></span> e <span><</span>div<spana>></spana> elementos<br> têm diferentes cores de fundo:</p>
+                <div id="2" style="background-color: aquamarine">
+                Exemplo
+                    <pre xmt>
+            h1 {
+            background-color: green;
+            }
+
+            div {   
+            background-color: lightblue;
+            }
+
+            p {
+            background-color: yellow;
+            }
+            </pre>
+                </div>
+
+        <h2>Imagem de fundo</h2>
+        <p>A background-imagepropriedade especifica uma imagem para usar como fundo de um elemento.<br>
+            Por padrão, a imagem é repetida para que ele cobre o elemento inteiro.<br>
+            A imagem de fundo para uma página pode ser definido assim:</p>
+            <div id="2" style="background-color: aquamarine">
+            Exemplo
+            <pre xmt>
+            body {
+            background-image: url("paper.gif");
+            } 
+            </pre>
+            </div>
+            <p>Abaixo está um exemplo de uma má combinação de imagem de fundo de texto e. O texto é dificilmente legível:</p>
+            <div id="2" style="background-color: aquamarine">
+            Exemplo
+            <pre xmt>
+            body {
+            background-image: url("bgdesert.jpg");
+            }
+            </pre>
+            </div>
+
+            <p>Nota: Ao usar uma imagem de fundo, use uma imagem que não perturbe o texto.</p>
+
+                <h2>Imagem de Fundo - Repetir horizontalmente ou verticalmente</h2>
+                <p>Por padrão, a background-imagepropriedade repete uma imagem horizontalmente e verticalmente.<br>
+                    Algumas imagens deve ser repetido apenas horizontalmente ou verticalmente, ou eles vão olhar estranho, como este:</p>
+            <div id="2" style="background-color:aquamarine">
+            Exemplo
+            <pre xmt>
+            body {
+            background-image: url("gradient_bg.png");
+            } 
+            </pre>
+            </div>
+            <p>Se a imagem acima é repetido apenas horizontalmente ( background-repeat: repeat-x;), o fundo vai parecer melhor:</p>
+            <div id="2" style="background-color: aquamarine">
+            Exemplo
+            <pre xmt>
+            body {
+            background-image: url("gradient_bg.png");
+            background-repeat: repeat-x;
+            }
+            </pre>
+            </div>
+                
+            <p>Dica: Para repetir uma imagem verticalmente, definirbackground-repeat: repeat-y;</p>
+
+            <h2>Imagem de fundo - Definir posição e no-repeat</h2>
+            <p>Mostrando a imagem de fundo apenas uma vez também é especificado pela background-repeatpropriedade:</p>
+            <div id="2" style="background-color: aquamarine">
+            Exemplo
+            <pre xmt>
+            body {
+            background-image: url("img_tree.png");
+            background-repeat: no-repeat;
+            }
+            </pre>
+            </div>
+ 
+            <p>No exemplo acima, a imagem de fundo é mostrado no mesmo lugar como o texto. Queremos mudar a posição da imagem, para que não<br> perturbe o texto demasiado.</p>
+            <p>A posição da imagem é especificado pela background-positionpropriedade:</p>
+            <div id="2" style="background-color: aquamarine">
+            Exemplo
+            <pre xmt>
+            body {
+            background-image: url("img_tree.png");
+            background-repeat: no-repeat;
+            background-position: right top;
+            }
+            </pre>
+                </div>
+            <h2>Imagem de Fundo - posição fixa</h2>
+            <p>Para especificar que a imagem de fundo deve ser fixado (não vai rolar com o resto da página), use a background-<br> attachmentpropriedade:</p>
+            <div id="2" style="background-color: aquamarine">
+            Exemplo
+            <pre xmt>
+            body {
+            background-image: url("img_tree.png");
+            background-repeat: no-repeat;
+            background-position: right top;
+            background-attachment: fixed;
+            } 
+            </pre>
+                </div>
+    </body>
+</html>

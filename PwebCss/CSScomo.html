@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8"/>
+    <title>CSS Como</title>
+    </head>
+    <body>
+        <h1>CSS Como</h1>
+        <h5>❮ Anterior 
+            Próxima ❯</h5>
+
+        <p>Quando um navegador lê uma folha de estilo, ele irá formatar o documento HTML de acordo com as informações na folha de estilo.</p>
+
+        <h2>Três maneiras de inserir CSS</h2>
+        <p>
+        Há três maneiras de inserir uma folha de estilo:<br>
+            <ol>
+                <li>folha de estilo externa</li><br>
+                <li>folha de estilo interna</li><br>
+                <li>estilo em linha</li></ol>
+        </p>
+
+        <h2>Folha de estilo externa</h2>
+        <p>Com uma folha de estilo externa, você pode mudar o olhar de um site inteiro, alterando apenas um arquivo!<br>
+            Cada página deve incluir uma referência ao arquivo de folha de estilo externa dentro do elemento <span><</span>link<span>></span>. O elemento <span><</span>link<span>></span> vai dentro da seção <span><</span>head<span>></span>:</p>
+            <div id="2" style="background-color: aquamarine">
+        Exemplo
+        <pre xmt>
+        <span><</span>head<span>></span>
+        <span><</span>link rel="stylesheet" type="text/css" href="mystyle.css"<span>></span>
+        <span><</span>/head<span>></span>
+        </pre>
+        </div>
+        <p>    
+        Uma folha de estilo externa pode ser escrito em qualquer editor de texto. O arquivo não deve conter quaisquer tags HTML. O arquivo de<br> folha de estilo deve ser salvo com a extensão .css.<br>
+        Aqui é como o "meuestilo.css" parece:</p>
+        <div id="2" style="background-color: aquamarine">
+        <pre xmt>
+        body {
+        background-color: lightblue;
+        }
+
+        h1 {
+        color: navy;
+        margin-left: 20px;
+        }
+        </pre>
+        </div>
+        <p>
+        Nota: Não adicione um espaço entre o valor da propriedade e da unidade (como margin-left: 20 px;). A maneira correta é:margin-left: 20px;
+        </p>
+
+
+        <h2>Folha de estilo interna</h2>
+        <p>Uma folha de estilo interna pode ser usado se uma única página tem um estilo único.<br>
+        estilos internos são definidos dentro do elemento <span><</span>style<span>></span>, dentro da seção <span><</span>head<span>></span><br>
+        de uma página HTML:</p>
+        <div id="2" style="background-color: aquamarine">
+        Exemplo
+        <pre xmt>
+        <span><</span>head<span>></span>
+        <span><</span>style<span>></span>
+        body {
+        background-color: linen;
+        }
+
+        h1 {
+        color: maroon;
+        margin-left: 40px;
+        } 
+        <span><</span>/style<span>></span>
+        <span><</span>/head<span>></span> 
+        </pre>
+        </div>
+
+        <h2>Estilos inline</h2>
+        <p>
+        Um estilo inline pode ser usado para aplicar um estilo único para um único elemento.<br>
+        Para usar estilos inline, adicione o atributo de estilo ao elemento relevante. O atributo de estilo pode conter qualquer propriedade<br> 
+        CSS.<br>
+        O exemplo abaixo mostra como alterar a cor ea margem esquerda de um <span><</span>h1<span>></span> elemento:</p>
+        <div id="2" style="background-color: aquamarine">
+        Exemplo
+        <pre xmt>
+        <span><</span>h1 style="color:blue;margin-left:30px;"<span>></span>This is a heading<span><</span>/h1<span>><span 
+        </pre>
+        </div>
+        <p>Dica: um estilo inline perde muitas das vantagens de uma folha de estilo (misturando conteúdo com apresentação). Utilize este<br>
+        método com moderação.</p>
+
+        <h2>Várias folhas de estilo</h2>
+        <p>
+        Se algumas propriedades foram definidas para o mesmo seletor (elemento) em diferentes folhas de estilo, o valor da última folha de<br>
+        estilo leitura será usado.</p>
+        <div id="2" style="background-color: aquamarine">
+        Exemplo
+        <pre xmt>
+        Suponha que uma folha de estilo externa tem o seguinte estilo para o <span><</span>h1<span>></span> elemento:
+        h1 {
+        color: navy;
+        } 
+        então, assumir que uma folha de estilo interna também tem o seguinte estilo para o <span><</span>h1<span>></span> elemento:
+        h1 {
+        color: orange;    
+        } 
+        Se o estilo interno é definido após o link para a folha de estilo externa, as marcas <span><</span>h1<span>></span> elementos serão "laranja":
+        Exemplo
+        <span><</span>head<span>></span>
+            <span><</span>link rel="stylesheet" type="text/css" href="mystyle.css"<span>></span>
+            <span><</span>style<span>></span>
+                h1 {
+        color: orange;
+                }
+            <span><</span>/style<span>></span>
+        <span><</span>/head<span>></span> 
+        </pre>
+        </div>
+        <p>
+        No entanto, se o estilo interno é definido antes do link para a folha de estilo externa, as marcas <span><</span>h1<span>></span> elementos serão "navy":</p>
+        <div id="2" style="background-color: aquamarine">
+        Exemplo
+        <pre xmt>
+        <span><</span>head<span>></span>
+            <span><</span>style<span>></span>
+                h1 {
+        color: orange;
+                }
+            <span><</span>/style<span>></span>
+            <span><</span>link rel="stylesheet" type="text/css" href="mystyle.css"<span>></span>
+        <span><</span>/head<span>></span>
+        </pre>
+        </div>
+        
+        <h2>Cascading Order</h2>
+        <p>O estilo será usado quando não é especificado mais de um estilo para um elemento HTML?</p>
+        <p>De um modo geral, podemos dizer que todos os estilos irá "cascata" em uma nova folha de estilo "virtual" pelas seguintes regras,<br> 
+        onde o número um tem a maior prioridade:</p>
+        <ol>
+        <li>estilo inline (dentro de um elemento HTML)</li>
+        <li>folhas de estilo externas e internas (na seção head)</li>
+        <li>padrão do navegador</li>
+        </ol>
+        </p>
+        <p>Assim, um estilo inline (dentro de um elemento HTML específico) tem a prioridade mais alta, o que significa que ele irá substituir um<br> estilo definido dentro da tag <span><</span>head<span>></span>, ou em uma folha de estilo externa, ou um valor padrão do navegador.</p>
+    
+    </body>
+    </html>

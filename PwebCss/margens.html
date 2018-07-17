@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Margens</title>
+    </head>
+    <body>
+        <h1>CSS Margens</h1>
+        <h5>❮ Anterior 
+        Próxima ❯</h5>
+
+        <img src="imagens/margem1.png"/>
+
+        <h2>Margens CSS</h2>
+        <p>As CSS margin propriedades são usadas para criar o espaço em torno de elementos, fora de quaisquer fronteiras definidas.</p>
+        <p>Com CSS, você tem total controle sobre as margens. Existem propriedades de fixação da margem de cada lado de um elemento (em cima, direita e inferior, e à esquerda).</p>
+
+        <h2>Margem - Sides individuais</h2>
+        <p>CSS tem propriedades para especificar a margem de cada lado de um elemento:</p>
+        <ul>
+            <li>margin-top</li>
+            <li>margin-right</li>
+            <li>margin-bottom</li>
+            <li>margin-left</li>
+        </ul>
+        <p>Todas as propriedades de margem pode ter os seguintes valores:</p>
+        <ul>
+            <li>auto - o navegador calcula a margem</li>
+            <li>comprimento - especifica uma margem em px, pt, cm, etc.</li>
+            <li>% - especifica uma margem em% da largura do elemento contendo</li>
+            <li>herdar - especifica que a margem devem ser herdado do elemento pai</li>
+        </ul>
+        <p>Dica: Os valores negativos são permitidos.</p>
+        <p>O exemplo a seguir define margens diferentes para todos os quatro lados de um elemento <span><</span>p<span>></span>:</p>
+            <div style="background-color: aquamarine">
+                Exemplo
+                <pre xmt>
+                    p {
+                    margin-top: 100px;
+                    margin-bottom: 100px;
+                    margin-right: 150px;
+                    margin-left: 80px;
+                    }
+                </pre>
+        </div>
+                    
+        <h2>Margem - Propriedade Taquigrafia</h2>
+        <p>Para encurtar o código, é possível especificar todas as propriedades de margem em uma propriedade.</p>
+        <p>A marginpropriedade é um atalho para as seguintes propriedades das margens individuais:</p>
+        <ul>
+            <li>margin-top</li>
+            <li>margin-right</li>
+            <li>margin-bottom</li>
+            <li>margin-left</li>
+        </ul>
+        <p>Então, aqui está como funciona:</p>
+        <h3>Se a marginpropriedade tem quatro valores:</h3>
+        <b>margem: 25px 50px 75px 100 p;</b>
+        <ul>
+            <li>margem direita é 50px</li>
+            <li>margem inferior é de 75 pixels</li>
+            <li>margem esquerda é 100px</li>
+        </ul>
+        <div style="background-color: aquamarine">
+        Exemplo
+            <pre xmt>
+                p {
+                margin: 25px 50px 75px 100px;
+                } 
+            </pre>
+        </div>
+        
+        <h3>Se a margin propriedade tem três valores:</h3>
+        <b>margem: 25 pixels de 50 pixels 75 pixels;</b>
+        <ul>
+            <li>margem superior é de 25 pixels</li>
+            <li>margens direita e esquerda são 50px</li>
+            <li>margem inferior é de 75 pixels</li>
+        </ul>
+        <div style="background-color: aquamarine">
+        Exemplo
+            <pre xmt>
+            p {
+            margin: 25px 50px 75px;
+            } 
+            </pre>
+        </div>
+        <h3>Se a margin propriedade tem dois valores:</h3>
+        <b>margem: 25 pixels de 50 pixels;</b>
+        <ul>
+            <li>margens superior e inferior têm 25 pixels</li>
+            <li>margens direita e esquerda são 50px</li>
+        </ul>
+        <div style="background-color: aquamarine">
+        Exemplo
+            <pre xmt>
+            p {
+            margin: 25px 50px;
+            }
+            </pre>
+        </div>
+        <h3>Se a margin propriedade tem um valor:</h3>
+        <b>margem: 25 pixels;</b>
+        <ul>
+            <li>todas as quatro margens são 25px</li>
+        </ul>
+            <div style="background-color: aquamarine">
+            Exemplo
+                <pre xmt>
+                p {
+                margin: 25px;
+                }
+                </pre>
+            </div>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>BOX</title>
+    </head>
+    <body>
+        <h1>CSS Box Model</h1>
+        <h5>❮ Anterior 
+            Próxima ❯</h5>
+
+        <h2>O modelo CSS Box</h2>
+        <p>Todos os elementos HTML podem ser considerados como caixas. Em CSS, o termo "modelo de caixa" é usado quando se fala em design e layout.</p>
+        <p>O modelo de caixa CSS é essencialmente uma caixa que envolve todos os elementos HTML. É constituída por: margens, bordas,<br>preenchimento, e o conteúdo real. A imagem abaixo ilustra o modelo de caixa:</p>
+        <img src="imagens/box1.png"/>
+        <p>Explicação das diferentes partes:</p>
+        <ul>
+            <li>Conteúdo - O conteúdo da caixa, em que o texto e as imagens aparecem</li>
+            <li>Padding - Limpa uma área em torno do conteúdo. O preenchimento é transparente</li>
+            <li>Border - A fronteira que vai ao redor do preenchimento e conteúdo</li>
+            <li>Margin - Limpa uma área fora da fronteira. A margem é transparente</li>
+        </ul>
+        <p>O modelo de caixa nos permite adicionar uma borda em torno de elementos, e para definir o espaço entre os elementos.</p>
+        <div style="background-color: aquamarine">
+        Exemplo
+            <pre xmt>
+                div {
+                width: 300px;
+                border: 25px solid green;
+                padding: 25px;
+                margin: 25px;
+                } 
+                </pre>
+        </div>
+
+        <h2>Largura e altura de um elemento</h2>
+        <p>A fim de definir a largura e altura de um elemento corretamente em todos os navegadores, você precisa saber como o modelo de caixa<br>funciona.</p>
+        <p>Importante: Quando você definir as propriedades width e height de um elemento com CSS, você apenas definir a largura e altura da área<br> de conteúdo . Para calcular o tamanho total de um elemento, você também deve adicionar preenchimento, bordas e margens.</p>
+        <p>Suponha que queremos denominar um elemento <span><</span>div<span>></span> para ter uma largura total de 350px:</p>
+            <div style="background-color: aquamarine">
+            Exemplo
+                <pre xmt>
+                div {
+                    width: 320px;
+                    padding: 10px;
+                    border: 5px solid gray;
+                    margin: 0; 
+                    } 
+                </pre>
+        </div>
+        <p>Aqui está o cálculo:</p>
+        <div style="background-color: aquamarine">
+            <pre xmt>
+            320 pixels (largura) 
+            + 20 p (esquerda para a direita + preenchimento) 
+            + 10px (esquerda para a direita + fronteira) 
+            + 0px (+ esquerda para a direita da margem) 
+            = 350px 
+            </pre>
+        </div>
+        <p>A largura total de um elemento deverá ser calculados como se segue:</p>
+        <p>elemento Largura total = largura + enchimento esquerdo + estofamento direita + fronteira esquerda + fronteira direita + margem<br> esquerda + margem direita</p>
+        <p>A altura total de um elemento deverá ser calculados como se segue:</p>
+        <p>Total elemento altura = altura + estofamento superior + acolchoamento inferior borda superior + + + borda inferior da margem<br>
+            superior + margem inferior</p>
+    </body>
+</html>
